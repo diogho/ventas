@@ -5,7 +5,8 @@
 	$nom=isset($_POST['nom']) ? $_POST['nom']:NULL;
 	$tel=isset($_POST['tel']) ? $_POST['tel']:NULL;
 	$dir=isset($_POST['dir']) ? $_POST['dir']:NULL;
-	echo $doc . "". $nom ."". $tel ."". $dir;
+	
+	$usuarios = $ins->selusu();
 
 	if($doc&&$nom&&$tel&&$dir)
 	{

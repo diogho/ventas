@@ -20,7 +20,6 @@ SET time_zone = "+00:00";
 -- Base de datos: `ventas`
 --
 
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbusuario`

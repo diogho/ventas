@@ -10,6 +10,14 @@
 			$sql = "INSERT INTO tbusuario (documento,nombre,telefono,direccion) VALUES ('".$documento."','".$nombre."','".$telefono."','".$direccion."');";
 			$this->cons($sql);
 		}
+		function selusu()
+		{
+			$sql = "SELECT * FROM tbusuario;";
+			$conexionBD = new conexion();
+			$conexionBD->conectarBD();
+			$data = $conexionBD->ejeCon($sql,0);
+			return $data;
+		}
 		function cons($c)
 		{
 			$conexionBD = new conexion();
