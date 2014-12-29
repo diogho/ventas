@@ -1,6 +1,6 @@
 <?php
-	$serv_bd = "192.168.1.3";
+	$serv_bd = "localhost";
 	$usu_bd = "root";
-	$pass_bd = "@mysql";
+	$pass_bd = "";
 	$bd = "ventas";
 ?>

@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>Pagina Principal</h1>
-	<button><a href="index.php?var=1">Insertar usuario</a></button>
+	<a href="index.php?var=1" class="btn btn-primary">Insertar usuario</a>
 	<?php 
 		$var = isset($_GET['var']) ? $_GET['var']:NULL;
 		if ($var==1) {
