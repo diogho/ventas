@@ -1,13 +1,6 @@
 <?php
 include ('controlador/cusuario.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset='utf-8'>
-	<title></title>
-</head>
-<body>
 	<h1 style="text-align:center">DATOS DE USUARIO</h1>
 	<form name="formUsuario" method="post" action="">
 		<div id="campos" style="width:300px; height: 100px;  margin: 0 auto 0">
@@ -16,13 +9,24 @@ include ('controlador/cusuario.php');
 				<label for="male">Nombre</label><br>
 				<label for="male">Teléfono</label><br>
 				<label for="male">Dirección</label><br>
+				<label for="">Perfil</label>
 			</div>
 
 			<div style="float:right">
-				<input name="doc" type="text"><br>
-				<input name="nom" type="text"><br>
-				<input name="tel" type="text"><br>
-				<input name="dir" type="text"><br>
+				<input name="doc" type="text" class="form-control"><br>
+				<input name="nom" type="text" class="form-control"><br>
+				<input name="tel" type="text" class="form-control"><br>
+				<input name="dir" type="text" class="form-control"><br>
+				<select name="" id="" class="form-control">
+					<?php
+						$selperfil = 20;
+						for ($i=0; $i < $selperfil; $i++) { 
+					?>
+					<option value="<?php echo $i; ?>"> <?php echo $i; ?> </option>
+					<?php
+						 } 
+					?>
+				</select>
 			</div>
 		</div>
 		<div style="width:300px; height: 100px;  margin: 0 auto 0">
@@ -39,14 +43,15 @@ include ('controlador/cusuario.php');
 			<th>Dirección</th>
 		</tr>
 		<?php
+			$selusuario = $ins->selusu();
 			for ($i=0; $i < count($usuarios); $i++) 
 			{ 
 		?>	
 		<tr>
-			<td><?php echo $usuarios[$i]['documento']; ?></td>
-			<td><?php echo $usuarios[$i]['nombre']; ?></td>
-			<td><?php echo $usuarios[$i]['telefono']; ?></td>
-			<td><?php echo $usuarios[$i]['direccion']; ?></td> 
+			<td><?php echo $selusuario[$i]['documento']; ?></td>
+			<td><?php echo $selusuario[$i]['nombre']; ?></td>
+			<td><?php echo $selusuario[$i]['telefono']; ?></td>
+			<td><?php echo $selusuario[$i]['direccion']; ?></td> 
 		</tr>
 		<?php 
 			}
@@ -54,5 +59,3 @@ include ('controlador/cusuario.php');
 	</table>
 	</center>
 	</div>
-</body>
-</html>

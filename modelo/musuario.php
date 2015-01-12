@@ -18,6 +18,14 @@
 			$data = $conexionBD->ejeCon($sql,0);
 			return $data;
 		}
+		function selperfil()
+		{
+			$sql = "SELECT * FROM tbperfil;";
+			$conexionBD = new conexion();
+			$conexionBD->conectarBD();
+			$data = $conexionBD->ejeCon($sql,0);
+			return $data;	
+		}
 		function cons($c)
 		{
 			$conexionBD = new conexion();
