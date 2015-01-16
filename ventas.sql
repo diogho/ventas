@@ -30,7 +30,7 @@ USE `ventas`;
 
 DROP TABLE IF EXISTS `tbperfil`;
 CREATE TABLE IF NOT EXISTS `tbperfil` (
-`id` int(2) NOT NULL,
+`id` int(2) NOT NULL PRIMARY KEY,
   `nombre` varchar(10) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 

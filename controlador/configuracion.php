@@ -1,6 +1,6 @@
 <?php
 	$serv_bd = "localhost";
 	$usu_bd = "root";
-	$pass_bd = "@mysql";
+	$pass_bd = "planear@estrato";
 	$bd = "ventas";
 ?>

@@ -12,7 +12,8 @@
 		}
 		function selusu()
 		{
-			$sql = "SELECT * FROM tbusuario;";
+			$sql = "SELECT usu.documento, usu.nombre, usu.telefono, usu.direccion, per.nombre as nomper FROM tbusuario as usu 
+						INNER JOIN tbperfil as per ON usu.idperfil=per.id;";
 			$conexionBD = new conexion();
 			$conexionBD->conectarBD();
 			$data = $conexionBD->ejeCon($sql,0);
