@@ -125,6 +125,9 @@
             if ($var==1) {
                 include('vista/vusuario.php');
             }
+            elseif ($var==2) {
+                include('vista/vperfil.php');
+            }
         ?>
 <!-- external javascript -->
 

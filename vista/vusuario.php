@@ -17,16 +17,28 @@ include ('controlador/cusuario.php');
 				<input name="nom" type="text" class="form-control"><br>
 				<input name="tel" type="text" class="form-control"><br>
 				<input name="dir" type="text" class="form-control"><br>
-				<select name="" id="" class="form-control">
+				<!--<select name="" id="" class="form-control">
 					<?php
+						//include ('controlador/cperfil.php');
 						$selperfil = 20;
-						for ($i=0; $i < $selperfil; $i++) { 
+						for ($i=0; $i < $selperfil; $i++)
+						{
 					?>
 					<option value="<?php echo $i; ?>"> <?php echo $i; ?> </option>
 					<?php
 						 } 
 					?>
-				</select>
+				</select>-->
+			<select name="idperf" id="" class="form-control">
+					<?php
+						$selperfil = $ins->selperf();
+						for ($i=0; $i < count($perfiles); $i++)
+						{
+					?>
+					<option value="<?php echo $selperfil[$i]['id']; ?>"> <?php echo $selperfil[$i]['nombre']; ?> </option>
+					<?php
+						 } 
+					?>
 			</div>
 		</div>
 		<div style="width:300px; height: 100px;  margin: 0 auto 0">
@@ -41,6 +53,7 @@ include ('controlador/cusuario.php');
 			<th>Nombre</th>
 			<th>Telefono</th>
 			<th>Dirección</th>
+			<th>Perfil</th>
 		</tr>
 		<?php
 			$selusuario = $ins->selusu();
@@ -52,6 +65,7 @@ include ('controlador/cusuario.php');
 			<td><?php echo $selusuario[$i]['nombre']; ?></td>
 			<td><?php echo $selusuario[$i]['telefono']; ?></td>
 			<td><?php echo $selusuario[$i]['direccion']; ?></td> 
+			<td><?php echo $selusuario[$i]['idperfil']; ?></td> 
 		</tr>
 		<?php 
 			}
