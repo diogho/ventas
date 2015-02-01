@@ -20,3 +20,11 @@
 	
 </body>
 </html>
+update tbperfil set nombre = replace(nombre, 'Ã¡', 'á');
+update tbperfil set nombre = replace(nombre, 'í©', 'é');
+update tbperfil set nombre = replace(nombre, 'Ã', 'í');
+update tbperfil set nombre = replace(nombre, 'Ã³', 'ó');
+update tbperfil set nombre = replace(nombre, 'íº', 'ú');
+update tbperfil set nombre = replace(nombre, 'Ãº', 'ú');
+update tbperfil set nombre = replace(nombre, 'Ã±', 'ñ');
+update tbperfil set nombre = replace(nombre, 'í‘', 'Ñ'); 
