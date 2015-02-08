@@ -113,7 +113,7 @@
 
                     </div>
                     <?php
-                        include("menu.php"); 
+                        include("menu.php");
                      ?>
                 </div>
             </div>
@@ -127,6 +127,10 @@
             }
             elseif ($var==2) {
                 include('vista/vperfil.php');
+            }
+
+            elseif ($var==3) {
+                include('controlador/creporte_perfil.php');
             }
         ?>
 <!-- external javascript -->

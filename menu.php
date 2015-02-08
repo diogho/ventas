@@ -4,4 +4,6 @@
                         </li>
                         <li><a class="ajax-link" href="home.php?var=2"><i class="glyphicon glyphicon-eye-open"></i><span> Perfiles</span></a>
                         </li>
+                        <li><a class="ajax-link" href="home.php?var=3"><i class="glyphicon glyphicon-eye-open"></i><span> Reportes</span></a>
+                        </li>
                     </ul>
