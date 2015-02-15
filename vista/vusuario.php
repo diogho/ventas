@@ -1,33 +1,44 @@
 <?php
 include ('controlador/cusuario.php');
+include ('controlador/cfunctions.php');
 ?>
 	
 	<div id="campos" style="width:500px; margin: 0 auto 0">
 		<h1 class="page-header">DATOS DE USUARIO</h1>
-		<form name="formUsuario" method="post" action="">		
+		<form name="formUsuario" method="post" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">		
 			<div class="row">
 				<div class="form-group col-lg-6">
-					<label for="male" class="control-label">Documento</label>
-					<input name="doc" type="text" class="form-control">
+					<label for="male" class="control-label">Documento:</label>
+					<input name="doc" id="doc" type="text" class="form-control">
 				</div>
 				<div class="form-group col-lg-6">
-					<label for="male" class="control-label">Nombre</label>
+					<label for="male" class="control-label">Nombre:</label>
 					<input name="nom" type="text" class="form-control">		
 				</div>	
 			</div>
 			<div class="row">
 				<div class="form-group col-lg-6">
-					<label for="male" class="control-label">Teléfono</label>
+					<label for="male" class="control-label">Teléfono:</label>
 					<input name="tel" type="text" class="form-control">		
 				</div>
 				<div class="form-group col-lg-6">
-					<label for="male" class="control-label">Dirección</label><br>
+					<label for="male" class="control-label">Dirección:</label><br>
 					<input name="dir" type="text" class="form-control">		
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-lg-6">
-					<label for="label" class="control-label">Perfil</label>	
+					<label for="male" class="control-label">Contraseña:</label>
+					<input name="pass" id="pass" type="text" class="form-control">		
+				</div>
+				<div class="form-group col-lg-6">
+					<label for="male" class="control-label">Confirme Contraseña:</label><br>
+					<input name="confpass" id="confpass" type="text" class="form-control">		
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-lg-6">
+					<label for="label" class="control-label">Seleccione el perfil</label>	
 					<select name="idperf" id="" class="form-control">
 						<?php
 							$selperfil = $ins->selperf();
@@ -43,7 +54,7 @@ include ('controlador/cusuario.php');
 			</div>
 			<div class="row">
 				<div class="form-group col-lg-6">
-					<input type="submit" value="Enviar" class="btn btn-primary">		
+					<input type="button" value="Registrar" class="btn btn-primary" onclick="return regformhash(this.form, this.form.doc, this.form.pass, this.form.confpass);">		
 				</div>
 			</div>
 		</form>	

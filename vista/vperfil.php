@@ -5,7 +5,6 @@ include ('controlador/cperfil.php');
 	<form name="formUsuario" method="post" action="">
 		<div id="campos" style="width:300px; height: 100px;  margin: 0 auto 0">
 			<div style="float:left">
-				<!--<label for="male">Número</label><br>-->
 				<label for="male">Nombre</label><br>
 			</div>
 

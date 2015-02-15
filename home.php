@@ -39,9 +39,13 @@
     <link href='css/uploadify.css' rel='stylesheet'>
     <link href='css/animate.min.css' rel='stylesheet'>
     
+
+
     <!-- jQuery -->
     <script src="bower_components/jquery/jquery.min.js"></script>
-
+    <!--
+    <script type="text/javascript" src="js/validate.js"></script>
+    -->
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -115,6 +119,7 @@
                     <?php
                         include("menu.php"); 
                      ?>
+
                 </div>
             </div>
         </div>
@@ -128,6 +133,9 @@
             elseif ($var==2) {
                 include('vista/vperfil.php');
             }
+            elseif ($var==3) {
+                include('vista/vpruebas.php');  
+            }
         ?>
 <!-- external javascript -->
 
@@ -137,7 +145,6 @@
 <script src="js/jquery.cookie.js"></script>
 <!-- calender plugin -->
 <script src='bower_components/moment/min/moment.min.js'></script>
-<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
 <!-- data table plugin -->
 <script src='js/jquery.dataTables.min.js'></script>
 
@@ -164,6 +171,11 @@
 <!-- application script for Charisma demo -->
 <script src="js/charisma.js"></script>
 
+<!-- Validación del ingreso de usuarios -->
+<script src="js/validate.js"></script>
+
+<!-- Validación del ingreso de usuarios -->
+<script src="js/sha512.js"></script>
 
 </body>
 </html>

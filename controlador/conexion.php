@@ -30,7 +30,7 @@
 		}
 		function ejeCon($con, $op) {
 			$this -> resultado = $this -> mysqli->query($con) or die("La consulta fallo: ". $this -> mysqli->error);
-			$res = $this -> resultado->fetch_assoc();
+			//$res = $this -> resultado->fetch_assoc();
 
 			if($op == 0) {
 				while ($linea = $this -> resultado->fetch_assoc()) {
