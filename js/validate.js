@@ -1,7 +1,7 @@
-function regformhash(form, doc, password, conf) 
+function regformhash(form, doc, nombre, password, conf) 
 {
     // Check each field has a value
-    if (doc.value == '' || password.value == '' || conf.value == '') {
+    if (doc.value == '' || nombre.value == '' || password.value == '' || conf.value == '') {
         alert('No ha registrado todos los elementos requeridos. Por favor intentelo de nuevo.');
         return false;
     }
@@ -31,7 +31,7 @@ function regformhash(form, doc, password, conf)
 
     p.name = "p";
     p.type = "hidden";
-    
+
     p.value = hex_sha512(password.value);
 
     alert("Atributos OK!");

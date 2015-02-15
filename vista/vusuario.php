@@ -13,7 +13,7 @@ include ('controlador/cfunctions.php');
 				</div>
 				<div class="form-group col-lg-6">
 					<label for="male" class="control-label">Nombre:</label>
-					<input name="nom" type="text" class="form-control">		
+					<input name="nom" id="nom" type="text" class="form-control">		
 				</div>	
 			</div>
 			<div class="row">
@@ -54,7 +54,7 @@ include ('controlador/cfunctions.php');
 			</div>
 			<div class="row">
 				<div class="form-group col-lg-6">
-					<input type="button" value="Registrar" class="btn btn-primary" onclick="return regformhash(this.form, this.form.doc, this.form.pass, this.form.confpass);">		
+					<input type="button" value="Registrar" class="btn btn-primary" onclick="return regformhash(this.form, this.form.doc, this.form.nom, this.form.pass, this.form.confpass);">		
 				</div>
 			</div>
 		</form>	
