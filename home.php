@@ -117,7 +117,7 @@
 
                     </div>
                     <?php
-                        include("menu.php"); 
+                        include("menu.php");
                      ?>
 
                 </div>
@@ -133,8 +133,14 @@
             elseif ($var==2) {
                 include('vista/vperfil.php');
             }
+<<<<<<< HEAD
             elseif ($var==3) {
                 include('vista/vpruebas.php');  
+=======
+
+            elseif ($var==3) {
+                include('controlador/creporte_perfil.php');
+>>>>>>> 1452516d9bf62f5f55e5e1309ddf30b00fb5d3f1
             }
         ?>
 <!-- external javascript -->

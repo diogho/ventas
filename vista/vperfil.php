@@ -27,6 +27,9 @@ include ('controlador/cperfil.php');
 		<div style="width:300px; height: 100px;  margin: 0 auto 0">
 			<input name="enviar" type="submit" value="ENVIAR">
 		</div>
+		<div>
+			<a  target="_blank" href="controlador/creporte_perfil.php">Descarga Estadisticas</a>
+		</div>
 	</form>
 	<center>
 	<div style="width:700px;  margin: 0 auto">
