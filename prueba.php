@@ -17,7 +17,7 @@
 			include('vista/vusuario.php');
 		}
 	?>
-	
+	<!--coment-->
 </body>
 </html>
 update tbperfil set nombre = replace(nombre, 'Ã¡', 'á');
